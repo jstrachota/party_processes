@@ -4,20 +4,29 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Procesy</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Název</th>
+      <th>Účel</th>
+      <th>Vlastník</th>
+      <th>Zákazník</th>
+    </tr>
+    {% for process in site.data.processes %}
+      <tr>
+        <td>{{ process[1].id }}</td>
+        <td>
+          <a class="post-link" href="/processes/{{process[0]}}.html">{{ process[1].nazev }}</a>
+        </td>
+        <td>{{process[1].ucel}}</td>
+        <td>{{process[1].vlastnik}}</td>
+        <td>{{process[1].zakaznik}}</td>
+      </tr>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </table>
+<!--
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>
