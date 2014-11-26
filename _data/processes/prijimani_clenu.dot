@@ -1,0 +1,35 @@
+digraph G {
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Krajské předsednictvo\n\nPřijímání členů\n\nv 2.0"]  
+
+  # Koordinátor obdrží přihlášku, provede pohovor a vydá doporučení
+  start -> elektronicka_prihlaska -> pohovor -> doporuceni
+  # Na základě doporučení buď KrP projedná přijetí nebo si pozve zájemce na jednání KrP
+  doporuceni -> projednani [label="doporučuje"]
+  doporuceni -> pozvani [label="nedoporučuje"]
+  # Po projednání odhlasuje KrP usnesení nebo si pozve zájemce na příští jednání KrP
+  projednani -> usneseni
+  projednani -> pozvani -> projednani
+  # Usnesení je vyznačeno v republikové databázi a dále proces přebírá RK
+  usneseni -> vyznaceni -> end
+  # Předsednictvo může přihlášku projednat i bez činnosti koordinátora
+  scanovani -> projednani
+  # Koordinátor může převzít přihlášku na pohovoru a doručí ji do kanceláře
+  pohovor -> papirova_prihlaska
+  # Papírové přihlášky chodí poštou do kanceláře, kde se scanují, vkládají do registru a archivují 
+  posta -> papirova_prihlaska -> scanovani -> archivace
+
+  start [shape=point height=0.2 label="Start"]
+  elektronicka_prihlaska [label="Přijetí přihlášky na webu"]
+  posta [label="Doručení poštou"]
+  papirova_prihlaska [label="Přijetí listinné přihlášky kanceláří"]
+  pohovor [label="Seznamovací schůzka s koordinátorem"]
+  scanovani [label="Naskenování přihlášky do registru"]
+  archivace [label="Archivace přihlášky"]
+  pozvani [label="Pozvání zájemce na jedníní KrP"]
+  projednani [label="Projednání na jednání KrP"]
+  doporuceni [shape=diamond label="Doporučení k ne/přijetí"]
+  usneseni [label="Usnesení KrP o ne/přijetí"]
+  vyznaceni [label="Vyznačení v republikové databázi"]
+  end [shape=point height=0.2 label="Konec"]
+
+}

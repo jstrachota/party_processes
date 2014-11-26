@@ -1,0 +1,18 @@
+name: pokus
+id:	KP001 - KRP-PRIJIMANI-CLENU
+nazev: Přijímání nových členů
+cil: Rozšiřování členské základny
+produkt: Členství
+ucel: Rozhodnout o přijetí zájemce o členství za člena
+vlastnik: Krajské předsednictvo (Praha - Kateřina Ramešová)
+zakaznik: Zájemce o členství
+problemy: 
+  - podpora v IS (kontrola);
+  - převod administrace papírových přihlášek na RK
+metriky:
+  - poměr nepřijatých ku přijatým;
+  - doba trvání celého procesu / jednotlivých částí procesu
+udalost: Přijetí přihlášky na webu
+podminky:	
+systemy: Starý web, registr, lokální evidence
+dokumenty: Stanovy (Požadavek KR-70 - KrP přijímá nové členy)
