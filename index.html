@@ -18,7 +18,7 @@ layout: default
       <tr>
         <td>{{ process[1].id }}</td>
         <td>
-          <a class="post-link" href="/processes/{{process[0]}}.html">{{ process[1].nazev }}</a>
+          <a class="post-link" href="{{ process[0] | append: ".html" | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url }}">{{ process[1].nazev }}</a>
         </td>
         <td>{{process[1].ucel}}</td>
         <td>{{process[1].vlastnik}}</td>
