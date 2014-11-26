@@ -12,3 +12,10 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# Datagen settings
+page_gen:
+ - data: processes
+   template: processes
+   name: name
+   dir: processes
