@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<h1>{{page.nazev}}<br/><small>{{page.id}}</small></h1>
+<div class="row">
+  <div class="col-xs-6">
+    <table class="table table-striped">
+    <tbody>
+<!--    <tr><th>Id procesu</th><td>{{page.id}}</td></tr>
+    <tr><th>Název procesu</th><td>{{page.nazev}}</td></tr> -->
+    <tr><th>Strategický cíl</th><td>{{page.cil}}</td></tr>
+    <tr><th>Produkt / služba</th><td>{{page.produkt}}</td></tr>
+    <tr><th>Účel</th><td>{{page.ucel}}</td></tr>
+    <tr><th>Vlastník procesu</th><td>{{page.vlastnik}}</td></tr>
+    <tr><th>Zákazník procesu</th><td>{{page.zakaznik}}</td></tr>
+    <tr><th>Oblasti pro zlepšení / problémy</th><td>{{page.problemy}}</td></tr>
+    <tr><th>Metriky</th><td>{{page.metriky}}</td></tr>
+    <tr><th>Startovací událost</th><td>{{page.udalost}}</td></tr>
+    <tr><th>Podmínky</th><td>{{page.podminky}}</td></tr>
+    <tr><th>Informační systémy / aplikace</th><td>{{page.systemy}}</td></tr>
+    <tr><th>Dokumenty</th><td>{{page.dokumenty}}</td></tr>
+    </tbody>
+    </table>
+    <hr/>
+    {{ page.text }}
+  </div>
+  <div class="col-xs-6">
+  	<img src="{{page.name | replace: 'html','svg'}}" width="600">
+    {% highlight bash %}
+      {{ page.dot }}
+    {% endhighlight %}
+  </div>
+
+</div>
