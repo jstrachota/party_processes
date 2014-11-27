@@ -1,0 +1,23 @@
+digraph G {
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Krajské předsednictvo\n\nHlasování per rollam\n\nv 1.0"]  
+
+  start -> formulace_usneseni -> urceni_lhuty -> vyhlaseni_hlasovani -> sber_hlasu -> je_zrejmy_vysledek
+  je_zrejmy_vysledek -> vyhlaseni_vysledku [label="ano"]
+  je_zrejmy_vysledek -> je_lhuta_uplynula [label="ne"]
+  je_lhuta_uplynula -> vyhlaseni_vysledku [label="ano"]
+  je_lhuta_uplynula -> sber_hlasu [label="ne"]
+  vyhlaseni_vysledku -> zapis -> end
+
+  je_zrejmy_vysledek [shape=diamond label="Je zřejmý výsledek?"]
+  je_lhuta_uplynula [shape=diamond label="Uplynula lhůta?"]
+
+  formulace_usneseni [label="Formulace usnesení"]
+  urceni_lhuty [label="Určení lhůty"]
+  vyhlaseni_hlasovani [label="Vyhlášení hlasování"]
+  sber_hlasu [label="Sběr hlasů"]
+  vyhlaseni_vysledku [label="Vyhlášení výsledků"]
+  zapis [label="Uvedení do zápisu"]
+
+  start [shape=point height=0.2 label="Start"]
+  end [shape=point height=0.2 label="Konec"]
+}

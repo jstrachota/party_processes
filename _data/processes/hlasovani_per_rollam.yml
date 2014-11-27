@@ -1,0 +1,23 @@
+name: pokus
+id:	KP003 - KRP-HLASOVANI-PER-ROLLAM
+nazev: Hlasování krajského předsednictva per-rollam
+cil: Operativní plnění úkolů orgánu (!)
+produkt: Usnesení KrP
+ucel: Přijmout usnesení v kompetenci krajského předsednictva
+vlastnik: Krajské předsednictvo (předseda)
+zakaznik: Krajský sněm/sdružení
+problemy: 
+  - chybí podpora v IS (volební systém - hlasování)
+  - pracné přenášení do následujícího zápisu z jednání
+metriky:
+  - počet hlasování
+  - účast
+  - délka trvání
+  - počet přijatých usnesení
+udalost: Aktivita předsedy
+podminky:	
+systemy:
+  - email
+dokumenty:
+  - stanovy
+  - jednací řád KrP
