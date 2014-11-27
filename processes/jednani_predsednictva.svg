@@ -99,8 +99,11 @@
 </g>
 <!-- zverejneni_zapisu -->
 <g id="node10" class="node"><title>zverejneni_zapisu</title>
+<g id="a_node10"><a xlink:href="http://wiki.svobodni.cz/KrP_Praha" xlink:title="Zveřejnění zápisu">
 <ellipse fill="none" stroke="black" cx="160.785" cy="-69.4" rx="73.4236" ry="18"/>
 <text text-anchor="middle" x="160.785" y="-65.2" font-family="Times,serif" font-size="14.00">Zveřejnění zápisu</text>
+</a>
+</g>
 </g>
 <!-- zaver&#45;&gt;zverejneni_zapisu -->
 <g id="edge9" class="edge"><title>zaver&#45;&gt;zverejneni_zapisu</title>

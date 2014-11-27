@@ -24,7 +24,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="/party_processes//css/main.css">
-  <link rel="canonical" href="/party_processes//processes/jednani_predsednictva.html">
+  <link rel="canonical" href="/party_processes//processes/hlasovani_per_rollam.html">
   <link rel="alternate" type="application/atom+xml" title="Procesy KrP Praha" href="/party_processes//feed.xml" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -72,7 +72,7 @@
 
 
     <div class="container">
-        <h1>Jednání krajského předsednictva<br/><small>KP001 - KRP-JEDNANI-PREDSEDNICTVA</small></h1>
+        <h1>Hlasování krajského předsednictva per-rollam<br/><small>KP003 - KRP-HLASOVANI-PER-ROLLAM</small></h1>
 
 <div role="tabpanel">
 <ul class="nav nav-tabs" role="tablist">
@@ -86,48 +86,51 @@
   <div role="tabpanel" class="tab-pane active" id="home">
     <table class="table table-striped">
       <tbody>
-        <tr><th>Strategický cíl</th><td>Plnění úkolů orgánu (!)</td></tr>
+        <tr><th>Strategický cíl</th><td>Operativní plnění úkolů orgánu (!)</td></tr>
         <tr><th>Produkt / služba</th><td>Usnesení KrP</td></tr>
-        <tr><th>Účel</th><td>Projednat záležitosti a přijmout usnesení v kompetenci krajského předsednictva</td></tr>
+        <tr><th>Účel</th><td>Přijmout usnesení v kompetenci krajského předsednictva</td></tr>
         <tr><th>Vlastník procesu</th><td>Krajské předsednictvo (předseda)</td></tr>
         <tr><th>Zákazník procesu</th><td>Krajský sněm/sdružení</td></tr>
-        <tr><th>Oblasti pro zlepšení / problémy</th><td><ul><li>chybí podpora v IS (pozvánky, usnesení)</li><li>složité vyznačování přijatých členů</li><li>složité schvalování, realizace a evidence výdajů</li></ul></td></tr>
-        <tr><th>Metriky</th><td><ul><li>počet jednání</li><li>účast</li><li>délka trvání</li><li>počet projednávaných bodů</li><li>počet přijatých usnesení</li></ul></td></tr>
-        <tr><th>Startovací událost</th><td>Časová perioda nebo žádost členů KrP</td></tr>
+        <tr><th>Oblasti pro zlepšení / problémy</th><td><ul><li>chybí podpora v IS (volební systém - hlasování)</li><li>pracné přenášení do následujícího zápisu z jednání</li></ul></td></tr>
+        <tr><th>Metriky</th><td><ul><li>počet hlasování</li><li>účast</li><li>délka trvání</li><li>počet přijatých usnesení</li></ul></td></tr>
+        <tr><th>Startovací událost</th><td>Aktivita předsedy</td></tr>
         <tr><th>Podmínky</th><td><ul></ul></td></tr>
-        <tr><th>Informační systémy / aplikace</th><td><ul><li>email</li><li>wiki</li></ul></td></tr>
+        <tr><th>Informační systémy / aplikace</th><td><ul><li>email</li></ul></td></tr>
         <tr><th>Dokumenty</th><td><ul><li>    stanovy</li><li>    jednací řád KrP</li></ul></td></tr>
       </tbody>
     </table>
   </div>
   <div role="tabpanel" class="tab-pane" id="description"><h1 id="popis-procesu">Popis procesu</h1>
 
-<p>Předseda pravidelně jednou za 14 dní svolává jednání krajského předsednictva.Pozvánku zasílá emailem členům KrP, ReP, KK, RK a na kancelar. V pozvánce uvádí místo, čas a program jednání.</p>
+<p>Předseda formuluje usnesení a určí lhůtu pro hlasování. Oboje odešle emailem místopředsedům KrP a VK, RK.</p>
 
-<p>Po zahájení jednání je určen zapisovatel a z bodů programu je sestaven pořad jednání. Projednávání bodu končí přijetím usnesení.</p>
+<p>Místopředsedové ve lhůtě hlasují v odpovědi na email PRO nebo PROTI návrhu.</p>
 
-<p>Z jednání je vyhotoven zápis, který je zveřejňován na wiki.</p>
+<p>Jakmile je výsledek volby zřejmý, předseda ho vyhlásí.</p>
 
+<p>Usnesení přijatá per-rollam zapisuje zapisovatel do zápisu z následujícího jednání KrP.</p>
 </div>
   <div role="tabpanel" class="tab-pane" id="graph">
-    <img src="/party_processes/processes/jednani_predsednictva.svg">
+    <img src="/party_processes/processes/hlasovani_per_rollam.svg">
     <div class="highlight"><pre><code class="language-bash" data-lang="bash">digraph G <span class="o">{</span>
-  owner <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>rect <span class="nv">style</span><span class="o">=</span>rounded <span class="nv">penwidth</span><span class="o">=</span><span class="m">3</span> <span class="nv">height</span><span class="o">=</span>1.0 <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Krajské předsednictvo\n\nJednání předsednictva\n\nv 1.0&quot;</span><span class="o">]</span>  
+  owner <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>rect <span class="nv">style</span><span class="o">=</span>rounded <span class="nv">penwidth</span><span class="o">=</span><span class="m">3</span> <span class="nv">height</span><span class="o">=</span>1.0 <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Krajské předsednictvo\n\nHlasování per rollam\n\nv 1.0&quot;</span><span class="o">]</span>  
 
-  start -&gt; pozvanka -&gt; urceni_zapisovatele -&gt; sestaveni_poradu -&gt; projednani_bodu -&gt; prijeti_usneseni -&gt; je_dalsi_bod
-  je_dalsi_bod -&gt; projednani_bodu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ano&quot;</span><span class="o">]</span>
-  je_dalsi_bod -&gt; zaver <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ne - program vyčerpán&quot;</span><span class="o">]</span>
-  zaver -&gt; zverejneni_zapisu -&gt; end
+  start -&gt; formulace_usneseni -&gt; urceni_lhuty -&gt; vyhlaseni_hlasovani -&gt; sber_hlasu -&gt; je_zrejmy_vysledek
+  je_zrejmy_vysledek -&gt; vyhlaseni_vysledku <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ano&quot;</span><span class="o">]</span>
+  je_zrejmy_vysledek -&gt; je_lhuta_uplynula <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ne&quot;</span><span class="o">]</span>
+  je_lhuta_uplynula -&gt; vyhlaseni_vysledku <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ano&quot;</span><span class="o">]</span>
+  je_lhuta_uplynula -&gt; sber_hlasu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;ne&quot;</span><span class="o">]</span>
+  vyhlaseni_vysledku -&gt; zapis -&gt; end
 
-  je_dalsi_bod <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>diamond <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Další bod na pořadu?&quot;</span><span class="o">]</span>
+  je_zrejmy_vysledek <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>diamond <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Je zřejmý výsledek?&quot;</span><span class="o">]</span>
+  je_lhuta_uplynula <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>diamond <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Uplynula lhůta?&quot;</span><span class="o">]</span>
 
-  pozvanka <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Pozvánka na jednání&quot;</span><span class="o">]</span>
-  urceni_zapisovatele <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Určení zapisovatele&quot;</span><span class="o">]</span>
-  sestaveni_poradu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Sestavení pořadu jednání&quot;</span><span class="o">]</span>
-  projednani_bodu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Projednání bodu&quot;</span><span class="o">]</span>
-  prijeti_usneseni <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Přijetí usnesení&quot;</span><span class="o">]</span>
-  zaver <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Závěr jednání&quot;</span><span class="o">]</span>
-  zverejneni_zapisu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Zveřejnění zápisu&quot;</span> <span class="nv">URL</span><span class="o">=</span><span class="s2">&quot;http://wiki.svobodni.cz/KrP_Praha&quot;</span><span class="o">]</span>
+  formulace_usneseni <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Formulace usnesení&quot;</span><span class="o">]</span>
+  urceni_lhuty <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Určení lhůty&quot;</span><span class="o">]</span>
+  vyhlaseni_hlasovani <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Vyhlášení hlasování&quot;</span><span class="o">]</span>
+  sber_hlasu <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Sběr hlasů&quot;</span><span class="o">]</span>
+  vyhlaseni_vysledku <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Vyhlášení výsledků&quot;</span><span class="o">]</span>
+  zapis <span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Uvedení do zápisu&quot;</span><span class="o">]</span>
 
   start <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point <span class="nv">height</span><span class="o">=</span>0.2 <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Start&quot;</span><span class="o">]</span>
   end <span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point <span class="nv">height</span><span class="o">=</span>0.2 <span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Konec&quot;</span><span class="o">]</span>
