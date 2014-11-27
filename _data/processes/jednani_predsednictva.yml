@@ -18,8 +18,8 @@ metriky:
   - počet přijatých usnesení
 udalost: Časová perioda nebo žádost členů KrP
 podminky:	
-systemy: 
-  - starý web
+systemy:
+  - email
   - wiki
 dokumenty:
   - stanovy

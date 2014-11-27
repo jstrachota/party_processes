@@ -9,7 +9,7 @@ digraph G {
   je_dalsi_bod [shape=diamond label="Další bod na pořadu?"]
 
   pozvanka [label="Pozvánka na jednání"]
-  urceni_zapisovatele [label="Sestavení pořadu jednání"]
+  urceni_zapisovatele [label="Určení zapisovatele"]
   sestaveni_poradu [label="Sestavení pořadu jednání"]
   projednani_bodu [label="Projednání bodu"]
   prijeti_usneseni [label="Přijetí usnesení"]

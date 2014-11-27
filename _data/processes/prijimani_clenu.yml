@@ -14,5 +14,8 @@ metriky:
   - doba trvání celého procesu / jednotlivých částí procesu
 udalost: Přijetí přihlášky na webu
 podminky:	
-systemy: Starý web, registr, lokální evidence
+systemy:
+  - starý web
+  - registr
+  - lokální tabulkový procesor
 dokumenty: Stanovy (Požadavek KR-70 - KrP přijímá nové členy)

@@ -11,11 +11,10 @@ module Jekyll
       @dir = dir
       @name = sanitize_filename(name) + ".html"
 
-      puts "PROCEESING #{data.inspect}"
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), template + ".html")
       self.data.merge!(data)
-      puts "DOT #{dot_file}"
+
       self.data['dot'] = File.open(dot_file).read
       self.data['title'] = data[name]
       self.data['text'] = Kramdown::Document.new(File.open(md_file).read).to_html
@@ -36,7 +35,7 @@ module Jekyll
 
     def generate(site)
       data = site.config['page_gen']
-      puts "GEGEGE"
+
       if data
         data.each do |data_spec|
           # todo: check input data correctness
@@ -46,7 +45,6 @@ module Jekyll
           dir = data_spec['dir'] || data_spec['data']
           
           if site.layouts.key? template
-            puts site.data['processes']
             records =  site.data['processes']
             records.each do |key,record|
                 dot_file = '_data/' + data_spec['data'] + "/"+ key +".dot"

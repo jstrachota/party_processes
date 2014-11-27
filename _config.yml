@@ -16,6 +16,6 @@ markdown: kramdown
 # Datagen settings
 page_gen:
  - data: processes
-   template: processes
+   template: process
    name: name
    dir: processes
