@@ -32,8 +32,8 @@
 </g>
 <!-- urceni_zapisovatele -->
 <g id="node4" class="node"><title>urceni_zapisovatele</title>
-<ellipse fill="none" stroke="black" cx="166.785" cy="-520.4" rx="99.0157" ry="18"/>
-<text text-anchor="middle" x="166.785" y="-516.2" font-family="Times,serif" font-size="14.00">Sestavení pořadu jednání</text>
+<ellipse fill="none" stroke="black" cx="166.785" cy="-520.4" rx="80.1633" ry="18"/>
+<text text-anchor="middle" x="166.785" y="-516.2" font-family="Times,serif" font-size="14.00">Určení zapisovatele</text>
 </g>
 <!-- pozvanka&#45;&gt;urceni_zapisovatele -->
 <g id="edge2" class="edge"><title>pozvanka&#45;&gt;urceni_zapisovatele</title>
