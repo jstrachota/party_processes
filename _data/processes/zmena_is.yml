@@ -1,0 +1,16 @@
+id:	IT001
+nazev: Změna v informačním systému
+cil: Zlepšení informačního systému
+produkt: Nasazená nová verze informačního systému
+ucel: Navrhnout, implementovat, přijmout a nasadit změnu informačního systému
+vlastnik: Správce IS (Jiří Kubíček)
+zakaznik: Uživatelé IS
+problemy: 
+metriky:
+  - počet požadavků
+  - délka trvání
+udalost: Podnět na rozšíření (issue)
+podminky:
+systemy:
+  - github.com
+dokumenty:

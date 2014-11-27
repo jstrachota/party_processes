@@ -1,0 +1,18 @@
+digraph G {
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="IS\n\nZměna v informačním systému\n\nv 1.0"]  
+
+  start -> new_issue -> fork -> commit -> send_pull_request -> is_pull_request_accepted -> merge -> deploy -> end
+  is_pull_request_accepted -> commit [label="ne"]
+
+  is_pull_request_accepted [shape=diamond label="Je požadavek akceptován?"]
+
+  new_issue [label="Nový požadavek na změnu (issue)"]
+  fork [label="Vytvoření pracovní větve (fork & branch)"]
+  commit [label="Uložení změny do repositáře (commit & push)"]
+  send_pull_request [label="Poslání požadavku na přijetí změny (pull request)"]
+  merge [label="Přijetí do hlavní větve (merge)"]
+  deploy [label="Nasazení změny do produkce (deploy)"]
+
+  start [shape=point height=0.2 label="Start"]
+  end [shape=point height=0.2 label="Konec"]
+}
