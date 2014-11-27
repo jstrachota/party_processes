@@ -1,9 +1,21 @@
 digraph G {
   owner [shape=rect style=rounded penwidth=3 height=1.0 label="Krajské předsednictvo\n\nJednání předsednictva\n\nv 1.0"]  
 
-  start -> pozvanka -> sestaveni_poradu -> projednani_bodu -> prijeti_usneseni -> zaver -> zverejneni_zapisu -> end
-  prijeti_usneseni -> projednani_bodu
-  
+  start -> pozvanka -> urceni_zapisovatele -> sestaveni_poradu -> projednani_bodu -> prijeti_usneseni -> je_dalsi_bod
+  je_dalsi_bod -> projednani_bodu [label="ano"]
+  je_dalsi_bod -> zaver [label="ne - program vyčerpán"]
+  zaver -> zverejneni_zapisu -> end
+
+  je_dalsi_bod [shape=diamond label="Další bod na pořadu?"]
+
+  pozvanka [label="Pozvánka na jednání"]
+  urceni_zapisovatele [label="Sestavení pořadu jednání"]
+  sestaveni_poradu [label="Sestavení pořadu jednání"]
+  projednani_bodu [label="Projednání bodu"]
+  prijeti_usneseni [label="Přijetí usnesení"]
+  zaver [label="Závěr jednání"]
+  zverejneni_zapisu [label="Zveřejnění zápisu"]
+
   start [shape=point height=0.2 label="Start"]
   end [shape=point height=0.2 label="Konec"]
 }
