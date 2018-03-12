@@ -1,0 +1,30 @@
+digraph G {
+  graph [	fontname = "Helvetica-Oblique", size = "8,8"  ];
+  node [	shape = polygon,
+    sides = 4,
+    color = deepskyblue,
+    style = filled,
+    fontname = "Helvetica-Outline" ];
+
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\nPřijímání členů\n\nv 2.0"]
+
+  # stavajici priznivec zada o clenstvi
+  start -> priznivec -> zadost_o_clenstvi_priznivce -> prijeti_priznivce -> splneni_podminek
+  platba_prispevku -> splneni_podminek
+  prijata_prihlaska -> splneni_podminek
+  splneni_podminek -> clen
+
+  # Priznivec nebyl prijat, je z nej nadale priznivce
+  zadost_o_clenstvi_priznivce -> neprijeti_priznivce -> priznivec
+
+  start [shape=point height=0.3 label="Start"]
+  clen [label="Řádný člen",color=salmon2]
+  priznivec [label="Příznivec",color=salmon2]
+  zadost_o_clenstvi_priznivce[label="Na webu vyplněná přihláška ke členství"]
+  platba_prispevku[label="Přijatý členský příspěvek"]
+  prijata_prihlaska[label="Doručena přihláška v listinné podobě"]
+  neprijeti_priznivce[label="KrP neschválil"]
+  prijeti_priznivce[label="KrP schválil za člena"]
+  splneni_podminek[ shape = "record", height = 0.05, width = 0.5, margin = "0,0", style = "filled", label = "<f0>|<f1>|<f2>", fillcolor="black" ]
+
+}

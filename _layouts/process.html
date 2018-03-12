@@ -2,40 +2,42 @@
 layout: default
 ---
 
-<h1>{{page.nazev}}<br/><small>{{page.id}}</small></h1>
-
-<div role="tabpanel">
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Tabulka</a></li>
-  <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Popis</a></li>
-  <li role="presentation"><a href="#graph" aria-controls="graph" role="tab" data-toggle="tab">Diagram</a></li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content col-xs-8">
-  <div role="tabpanel" class="tab-pane active" id="home">
-    <table class="table table-striped">
-      <tbody>
-        <tr><th>Strategický cíl</th><td>{{page.cil}}</td></tr>
-        <tr><th>Produkt / služba</th><td>{{page.produkt}}</td></tr>
-        <tr><th>Účel</th><td>{{page.ucel}}</td></tr>
-        <tr><th>Vlastník procesu</th><td>{{page.vlastnik}}</td></tr>
-        <tr><th>Zákazník procesu</th><td>{{page.zakaznik}}</td></tr>
-        <tr><th>Oblasti pro zlepšení / problémy</th><td><ul>{% for problem in page.problemy %}<li>{{problem}}</li>{% endfor %}</ul></td></tr>
-        <tr><th>Metriky</th><td><ul>{% for metrika in page.metriky %}<li>{{metrika}}</li>{% endfor %}</ul></td></tr>
-        <tr><th>Startovací událost</th><td>{{page.udalost}}</td></tr>
-        <tr><th>Podmínky</th><td><ul>{% for podminka in page.podminky %}<li>    {{podminka}}</li>{% endfor %}</ul></td></tr>
-        <tr><th>Informační systémy / aplikace</th><td><ul>{% for system in page.systemy %}<li>{{system}}</li>{% endfor %}</ul></td></tr>
-        <tr><th>Dokumenty</th><td><ul>{% for dokument in page.dokumenty %}<li>    {{dokument}}</li>{% endfor %}</ul></td></tr>
-      </tbody>
-    </table>
+<div class="row">
+  <div class="col-xs-3">
+    <ul class="pull-right nav">
+      {% for process in site.data.processes %}
+        <li><a class="post-link" href="{{ process[0] | append: ".html" | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url }}">{{ process[1].id }}. {{ process[1].nazev }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
-  <div role="tabpanel" class="tab-pane" id="description">{{ page.text }}</div>
-  <div role="tabpanel" class="tab-pane" id="graph">
-    <img src="{{ page.name | replace: 'html','svg' | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url}}">
-    {% highlight bash %}
-      {{ page.dot }}
-    {% endhighlight %}
+
+  <div class="col-xs-9">
+    <h1>{{page.nazev}}</h1>
+
+    <div id="home">
+      <table class="table table-striped">
+        <tbody>
+          {% if page.cil %}<tr><th>Strategický cíl</th><td>{{page.cil}}</td></tr>{% endif %}
+          {% if page.produkt %}<tr><th>Produkt / služba</th><td>{{page.produkt}}</td></tr>{% endif %}
+          {% if page.ucel %}<tr><th>Účel</th><td>{{page.ucel}}</td></tr>{% endif %}
+          {% if page.vlastnik %}<tr><th>Vlastník procesu</th><td>{{page.vlastnik}}</td></tr>{% endif %}
+          {% if page.zakaznik %}<tr><th>Zákazník procesu</th><td>{{page.zakaznik}}</td></tr>{% endif %}
+          {% if page.problemy %}<tr><th>Oblasti pro zlepšení / problémy</th><td><ul>{% for problem in page.problemy %}<li>{{problem}}</li>{% endfor %}</ul></td></tr>{% endif %}
+          {% if page.metriky %}<tr><th>Metriky</th><td><ul>{% for metrika in page.metriky %}<li>{{metrika}}</li>{% endfor %}</ul></td></tr>{% endif %}
+          {% if page.udalost %}<tr><th>Startovací událost</th><td>{{page.udalost}}</td></tr>{% endif %}
+          {% if page.podminky %}<tr><th>Podmínky</th><td><ul>{% for podminka in page.podminky %}<li>    {{podminka}}</li>{% endfor %}</ul></td></tr>{% endif %}
+          {% if page.systemy %}<tr><th>Informační systémy / aplikace</th><td><ul>{% for system in page.systemy %}<li>{{system}}</li>{% endfor %}</ul></td></tr>{% endif %}
+          {% if page.dokumenty %}<tr><th>Dokumenty</th><td><ul>{% for dokument in page.dokumenty %}<li>    {{dokument}}</li>{% endfor %}</ul></td></tr>{% endif %}
+        </tbody>
+      </table>
+    </div>
+    <div id="graph">
+      <img src="{{ page.name | replace: 'html','svg' | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url}}" class="img-thumbnail img-responsive">
+      <!--{% highlight dot %}
+  {{ page.dot }}
+      {% endhighlight %}-->
+    </div>
+    <div style="margin-top: 1em" id="description">{{ page.text }}</div>
   </div>
-</div>
+
 </div>

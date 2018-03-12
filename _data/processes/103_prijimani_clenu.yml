@@ -1,18 +1,18 @@
-id:	KP002 - KRP-PRIJIMANI-CLENU
-nazev: Přijímání nových členů
+id:	103
+nazev: KrP - Přijímání nových členů
 cil: Rozšiřování členské základny
 produkt: Členství
 ucel: Rozhodnout o přijetí zájemce o členství za člena
-vlastnik: Krajské předsednictvo (Praha - Kateřina Ramešová)
+vlastnik: Krajské předsednictvo
 zakaznik: Zájemce o členství
-problemy: 
+problemy:
   - podpora v IS (kontrola);
   - převod administrace papírových přihlášek na RK
 metriky:
   - poměr nepřijatých ku přijatým;
   - doba trvání celého procesu / jednotlivých částí procesu
 udalost: Přijetí přihlášky na webu
-podminky:	
+podminky:
 systemy:
   - starý web
   - registr

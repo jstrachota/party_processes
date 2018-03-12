@@ -1,0 +1,77 @@
+digraph G {
+  graph [	fontname = "Helvetica-Oblique", size = "8,8"  ];
+  node [	shape = polygon,
+    sides = 4,
+    color = deepskyblue,
+    style = filled,
+    fontname = "Helvetica-Outline" ];
+
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\nPřijímání členů\n\nv 2.0"]
+
+
+  start -> zadost_o_clenstvi -> platba_prispevku_zajemce -> priznivec_zajemce -> prijeti -> clen
+
+  #start -> nezaplaceny_priznivec -> prijeti_daru -> priznivec
+
+  # stavajici priznivec zada o clenstvi
+  #priznivec -> zadost_o_clenstvi_priznivce -> prijeti_priznivce -> splneni_podminek
+  #platba_prispevku -> splneni_podminek
+  #prijata_prihlaska -> splneni_podminek
+  #splneni_podminek -> clen
+
+  # Priznivec nebyl prijat, je z nej nadale priznivce
+  #zadost_o_clenstvi_priznivce -> neprijeti_priznivce -> priznivec
+
+  # Zajemce o clenstvi nebyl prijat, vracime prispevek a je z nej nezaplaceny priznivec
+  priznivec_zajemce -> neprijeti_zajemce[style=dotted]
+  neprijeti_zajemce -> nezaplaceny_priznivec
+  neprijeti_zajemce -> vraceni_prispevku
+
+
+  # nezaplaceny priznivec zada o clenstvi
+  #nezaplaceny_priznivec -> zadost_o_clenstvi
+
+
+subgraph cluster_obnova {
+  # Prodlouzeni clenstvi
+  #clen -> clen_po_roce
+  #clen_po_roce -> platba_prispevku
+  #clen_po_roce -> nezaplaceny_priznivec[style=dotted]
+
+  # Prodlouzeni priznivectvi
+  #priznivec -> priznivec_po_roce
+  #priznivec_po_roce -> prijeti_daru
+  #priznivec_po_roce -> nezaplaceny_priznivec[style=dotted]
+}
+
+  # Ukonceni clenstvi na zadost
+  #clen -> priznivec[style=dotted,label="ukončil členství"]
+
+  # Vymazani udaju subjektu na zadost
+  #priznivec -> vymazani_udaju
+  #nezaplaceny_priznivec -> vymazani_udaju
+  #vymazani_udaju -> end
+
+  start [shape=point height=0.3 label="Start"]
+  nezaplaceny_priznivec [label="Nezaplacený příznivec", color=salmon2]
+  #clen_po_roce [label="Po roce", color=goldenrod2]
+  #priznivec_po_roce [label="Po roce", color=goldenrod2]
+  clen [label="Řádný člen",color=salmon2]
+  #priznivec [label="Příznivec",color=salmon2]
+  #priznivec_zajemce [color=salmon2]
+  zadost_o_clenstvi[label="Na webu vyplněná přihláška ke členství"]
+  #zadost_o_clenstvi_priznivce[label="Na webu vyplněná přihláška ke členství"]
+  #platba_prispevku[label="Přijatý členský příspěvek"]
+  #prijeti_daru[label="Přijatý dar od příznivce"]
+  platba_prispevku_zajemce[label="Přijatý členský příspěvek"]
+  priznivec_zajemce[label="Příznivec", color=salmon2]
+  neprijeti_zajemce[label="KrP neschválil"]
+  #neprijeti_priznivce[label="KrP neschválil"]
+  prijeti[label="KrP schválil za člena"]
+  #prijeti_priznivce[label="KrP schválil za člena"]
+  vraceni_prispevku[label="Vrácení členského příspěvku"]
+  #vymazani_udaju[label="Vymazání údajů na žádost"]
+  #splneni_podminek[ shape = "record", height = 0.05, width = 0.5, margin = "0,0", style = "filled", label = "<f0>|<f1>|<f2>", fillcolor="black" ]
+  #end [shape=point height=0.3 label="Konec"]
+
+}

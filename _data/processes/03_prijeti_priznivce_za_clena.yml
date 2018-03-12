@@ -1,0 +1,20 @@
+id:	03
+nazev: Přijetí příznivce za člena
+cil: Rozšiřování členské základny
+produkt: Členství
+ucel: Rozhodnout o přijetí zájemce o členství za člena
+vlastnik: Krajské předsednictvo
+zakaznik: Příznivec - zájemce o členství
+# problemy:
+#   - podpora v IS (kontrola);
+#   - převod administrace papírových přihlášek na RK
+# metriky:
+#   - poměr nepřijatých ku přijatým;
+#   - doba trvání celého procesu / jednotlivých částí procesu
+udalost: Přijetí přihlášky na webu / v registru
+#podminky:
+# systemy:
+#   - starý web
+#   - registr
+#   - lokální tabulkový procesor
+# dokumenty: Stanovy (Požadavek KR-70 - KrP přijímá nové členy)

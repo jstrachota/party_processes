@@ -1,0 +1,27 @@
+digraph G {
+  graph [ fontname = "Helvetica-Oblique", size = "8,8" ];
+  node [ shape = polygon,
+    sides = 4,
+    color = deepskyblue,
+    style = filled,
+    fontname = "Helvetica-Outline" ];
+
+//  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\Registrace příznivce\n\nv 1.0"]
+
+  start -> nezaplaceny_priznivec -> prijeti_daru -> priznivec
+
+  # nezaplaceny priznivec zada o clenstvi
+  nezaplaceny_priznivec -> zadost_o_clenstvi
+
+  # Vymazani udaju subjektu na zadost
+  nezaplaceny_priznivec -> vymazani_udaju -> end
+
+  start [shape=point height=0.3 label="Start"]
+  nezaplaceny_priznivec [label="Nově registrovaný příznivec", color=salmon2]
+  priznivec [label="Příznivec",color=salmon2]
+  zadost_o_clenstvi[label="Vyplněná přihláška ke členství"]
+  prijeti_daru[label="Přijatý dar od příznivce"]
+  vymazani_udaju[label="Vymazání údajů na žádost"]
+  end [shape=point height=0.3 label="Konec"]
+
+}

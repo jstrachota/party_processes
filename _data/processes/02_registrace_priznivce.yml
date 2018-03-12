@@ -1,0 +1,19 @@
+id:	02
+nazev: Registrace příznivce
+cil: Rozšiřování okruhu příznivců
+produkt: Příznivci
+ucel: Umožnit podporovateli participovat na činnosti strany jako příznivce
+vlastnik: Republikové předsednictvo
+zakaznik: Podporovatel
+# problemy:
+#   - podpora v IS (kontrola);
+#   - převod administrace papírových přihlášek na RK
+# metriky:
+#   - poměr nepřijatých ku přijatým;
+#   - doba trvání celého procesu / jednotlivých částí procesu
+# udalost: Přijetí přihlášky na webu
+# podminky:
+# systemy:
+#   - web
+#   - registr
+# dokumenty: Stanovy (Požadavek KR-70 - KrP přijímá nové členy)

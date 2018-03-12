@@ -20,4 +20,3 @@ KrP projednává přijetí zájemce o členství na základě doručení listinn
 Na základě přijatého usnesení vyznačí pověřený člen KrP přijetí do starého systému na adrese adminpraha.svobodni.cz nebo napíše zprávu o nepřijetí na kancelar@svobodni.cz. Ta smaže osobu z databáze, aby se mohla zaregistrovat znovu, např. jako příznivce.
 
 Po vyznačení přijetí v databázi odesílá starý systém výzvu k úhradě členského příspěvku, po jeho úhradě se stává zájemce řádným členem. Toto vyznačuje republiková kancelář ve starém systému.
-

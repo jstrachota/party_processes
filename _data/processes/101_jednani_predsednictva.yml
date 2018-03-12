@@ -1,11 +1,11 @@
-id:	KP001 - KRP-JEDNANI-PREDSEDNICTVA
+id:	101
 nazev: Jednání krajského předsednictva
 cil: Plnění úkolů orgánu (!)
 produkt: Usnesení KrP
 ucel: Projednat záležitosti a přijmout usnesení v kompetenci krajského předsednictva
 vlastnik: Krajské předsednictvo (předseda)
 zakaznik: Krajský sněm/sdružení
-problemy: 
+problemy:
   - chybí podpora v IS (pozvánky, usnesení)
   - složité vyznačování přijatých členů
   - složité schvalování, realizace a evidence výdajů
@@ -16,7 +16,7 @@ metriky:
   - počet projednávaných bodů
   - počet přijatých usnesení
 udalost: Časová perioda nebo žádost členů KrP
-podminky:	
+podminky:
 systemy:
   - email
   - wiki
