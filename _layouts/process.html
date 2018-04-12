@@ -5,7 +5,8 @@ layout: default
 <div class="row">
   <div class="col-xs-3">
     <ul class="pull-right nav">
-      {% for process in site.data.processes %}
+      {% assign processes = site.data.processes | sort: [0] %}
+      {% for process in processes %}
         <li><a class="post-link" href="{{ process[0] | append: ".html" | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url }}">{{ process[1].id }}. {{ process[1].nazev }}</a></li>
       {% endfor %}
     </ul>
@@ -37,7 +38,7 @@ layout: default
   {{ page.dot }}
       {% endhighlight %}-->
     </div>
-    <div style="margin-top: 1em" id="description">{{ page.text }}</div>
+    <div style="margin-top: 1em; width: 60%" id="description">{{ page.text }}</div>
   </div>
 
 </div>

@@ -9,15 +9,14 @@ digraph G {
   owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\nPřijímání členů\n\nv 2.0"]
 
 
-  start -> zadost_o_clenstvi -> platba_prispevku_zajemce -> priznivec_zajemce -> prijeti -> clen
+  start -> zadost_o_clenstvi -> platba_prispevku_zajemce -> priznivec_zajemce -> prijeti -> splneni_podminek -> clen
 
   #start -> nezaplaceny_priznivec -> prijeti_daru -> priznivec
 
   # stavajici priznivec zada o clenstvi
   #priznivec -> zadost_o_clenstvi_priznivce -> prijeti_priznivce -> splneni_podminek
-  #platba_prispevku -> splneni_podminek
-  #prijata_prihlaska -> splneni_podminek
-  #splneni_podminek -> clen
+  platba_prispevku -> splneni_podminek
+  prijata_prihlaska -> splneni_podminek
 
   # Priznivec nebyl prijat, je z nej nadale priznivce
   #zadost_o_clenstvi_priznivce -> neprijeti_priznivce -> priznivec
@@ -61,7 +60,7 @@ subgraph cluster_obnova {
   #priznivec_zajemce [color=salmon2]
   zadost_o_clenstvi[label="Na webu vyplněná přihláška ke členství"]
   #zadost_o_clenstvi_priznivce[label="Na webu vyplněná přihláška ke členství"]
-  #platba_prispevku[label="Přijatý členský příspěvek"]
+  platba_prispevku[label="Přijatý členský příspěvek"]
   #prijeti_daru[label="Přijatý dar od příznivce"]
   platba_prispevku_zajemce[label="Přijatý členský příspěvek"]
   priznivec_zajemce[label="Příznivec", color=salmon2]
@@ -70,8 +69,9 @@ subgraph cluster_obnova {
   prijeti[label="KrP schválil za člena"]
   #prijeti_priznivce[label="KrP schválil za člena"]
   vraceni_prispevku[label="Vrácení členského příspěvku"]
+  prijata_prihlaska[label="Doručena přihláška v listinné podobě"]
   #vymazani_udaju[label="Vymazání údajů na žádost"]
-  #splneni_podminek[ shape = "record", height = 0.05, width = 0.5, margin = "0,0", style = "filled", label = "<f0>|<f1>|<f2>", fillcolor="black" ]
+  splneni_podminek[ shape = "record", height = 0.05, width = 0.5, margin = "0,0", style = "filled", label = "<f0>|<f1>|<f2>", fillcolor="black" ]
   #end [shape=point height=0.3 label="Konec"]
 
 }

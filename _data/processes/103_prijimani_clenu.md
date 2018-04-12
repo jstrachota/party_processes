@@ -17,6 +17,4 @@ Při negativním doporučení koordinátora si KrP pozve zájemce o členství n
 
 KrP projednává přijetí zájemce o členství na základě doručení listinné přihlášky a doporučení koordinátora a/nebo za účasti zájemce o členství. Poté hlasuje o usnesení ve tvaru: "Krajské předsednictvo přijímá pana/paní X Y za člena/členku." Do zápisu se uvede i kdo přijetí doporučil, ideálně také členské číslo z registru.
 
-Na základě přijatého usnesení vyznačí pověřený člen KrP přijetí do starého systému na adrese adminpraha.svobodni.cz nebo napíše zprávu o nepřijetí na kancelar@svobodni.cz. Ta smaže osobu z databáze, aby se mohla zaregistrovat znovu, např. jako příznivce.
-
-Po vyznačení přijetí v databázi odesílá starý systém výzvu k úhradě členského příspěvku, po jeho úhradě se stává zájemce řádným členem. Toto vyznačuje republiková kancelář ve starém systému.
+Na základě přijatého usnesení vyznačí pověřený člen KrP přijetí nebo nepřijetí do registru.
