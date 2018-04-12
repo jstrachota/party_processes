@@ -86,6 +86,7 @@
   <div class="col-xs-3">
     <ul class="pull-right nav">
       
+      
         <li><a class="post-link" href="http://svobodni.github.io/party_processes/processes/01_prijeti_clena.html">1. Přijetí člena</a></li>
       
         <li><a class="post-link" href="http://svobodni.github.io/party_processes/processes/02_registrace_priznivce.html">2. Registrace příznivce</a></li>
@@ -158,7 +159,7 @@
 
       </code></pre></figure>-->
     </div>
-    <div style="margin-top: 1em" id="description"><p>Přijetí příznivce za člena
+    <div style="margin-top: 1em; width: 60%" id="description"><p>Přijetí příznivce za člena
 Zájemce o členství vyplnění přihlášku v registru pod svým stávajícím účtem příznivce. V sekci členství jsou mu zobrazeny:
 informace o úhradě členského příspěvku
 vyplněná přihláška ve formátu PDF k vytištění, podepsání a podání v listinné podobě
@@ -166,24 +167,24 @@ základní informace o budoucím kontaktu od KrP nebo koordinátora</p>
 
 <p>Informace o výši členského příspěvku je uvedena jako minimální částka doplněná o informaci, že ji zájemce může ponížit o již zaplacený příznivecký příspěvek.</p>
 
-<p>Tyto informace dostane také emailem (eml: 7. Při změně z reg. příznivce na člena.)</p>
+<p>Tyto informace dostane také <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/supporter_application.text.erb">emailem</a></p>
 
-<p>Po přijetí úhrady na správný účet se správným variabilním symbolem je platba zaúčtována jako členský příspěvek do republikového a krajského rozpočtu a zájemci je zaslán email. (eml: 9. Potvrzení platby členského příspěvku (ale čekáme na další podmínky))</p>
+<p>Po přijetí úhrady na správný účet se správným variabilním symbolem je platba zaúčtována jako členský příspěvek do republikového a krajského rozpočtu a zájemci je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/supporter_paid.text.erb">email</a>.</p>
 
 <p>Po přijetí přihlášky v listinné formě ji kancelář nahraje do systému.</p>
 
-<p>Krajské předsednictvo vyznačuje v registru informaci o přijetí za člena. Pokud zatím není zaplacený členský příspěvek, je příznivci zaslán email. (eml: 10. Upomínka, když se čeká na zaplacení (KrP vyznačil schválení + přihláška je u nás))</p>
+<p>Krajské předsednictvo vyznačuje v registru informaci o přijetí za člena. Pokud zatím není zaplacený členský příspěvek, je příznivci zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/supporter_payment_pending.text.erb">email</a>.</p>
 
-<p>Po splnění všech tří podmínek (přihláška v listinné podobě, zaplacený členský příspěvek, schválení přijetí KrP) dojde v registru ke změně stavu na člena a členovi je zaslán email. (eml: 4. Zájemce je přijat (sejdou se všechny podmínky = vyznačeno schválení KrP + má zaplaceno + v kanceláři máme originální přihlášku s podpisem)</p>
+<p>Po splnění všech tří podmínek (přihláška v listinné podobě, zaplacený členský příspěvek, schválení přijetí KrP) dojde v registru ke změně stavu na člena a členovi je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/regular.text.erb">email</a>.</p>
 
 <p>Alternativní scénáře:
 Pokud je platba zaslána na špatný účet, vrací kancelář platbu a kontaktuje příznivce.</p>
 
 <p>Pokud je variabilní symbol špatný, pokusí se kancelář dohledat správný a proces pokračuje dál. Pokud se nepodaří platbu identifikovat, vrací kancelář platbu.</p>
 
-<p>Pokud zájemce není přijat za člena, vrací kancelář platbu (eml: 6. Výzva kanceláři k vrácení příspěvku v okamžiku, kdy KrP vyznačí odmítnutí). Platba musí být odúčtována z republikového a krajského rozpočtu. Zájemci je zaslán email. (eml: 8. Odmítnutí zájemce, který už byl předtím registrovaným příznivcem). Zájemci zůstává v registru status příznivce.</p>
+<p>Pokud zájemce není přijat za člena, vrací kancelář platbu na základě [emailu] (https://github.com/svobodni/party_registry/blob/supporters/app/views/office_notifications/return_membership_fee.text.erb) a vnitřní kontroly. Platba musí být odúčtována z republikového a krajského rozpočtu. Zájemci je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/supporter_rejected.text.erb">email</a>. Zájemci zůstává v registru status příznivce.</p>
 
-<p>Pokud po 10 dnech od vyznečení KrP nemá kancelář přihlášku, posílá se upomínka KrP (eml: 11. Upomínka KrPu, když se čeká na přihlášku (po 10 dnech co KrP vyznačil schválení))</p>
+<p>Pokud po 10 dnech od vyznečení KrP nemá kancelář přihlášku, posílá se <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/presidium_notifications/missing_application.text.erb">upomínka KrP</a></p>
 </div>
   </div>
 

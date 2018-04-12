@@ -86,6 +86,7 @@
   <div class="col-xs-3">
     <ul class="pull-right nav">
       
+      
         <li><a class="post-link" href="http://svobodni.github.io/party_processes/processes/01_prijeti_clena.html">1. Přijetí člena</a></li>
       
         <li><a class="post-link" href="http://svobodni.github.io/party_processes/processes/02_registrace_priznivce.html">2. Registrace příznivce</a></li>
@@ -136,16 +137,15 @@
   <span class="nv">owner</span> <span class="o">[</span><span class="n">shape</span><span class="p">=</span><span class="nv">rect</span> <span class="n">style</span><span class="p">=</span><span class="nv">rounded</span> <span class="n">penwidth</span><span class="p">=</span><span class="mi">3</span> <span class="n">height</span><span class="p">=</span><span class="mf">1.0</span> <span class="n">label</span><span class="p">=</span><span class="s2">"Registr\n\nPřijímání členů\n\nv 2.0"</span><span class="o">]</span>
 
 
-  <span class="nv">start</span> <span class="o">-&gt;</span> <span class="nv">zadost_o_clenstvi</span> <span class="o">-&gt;</span> <span class="nv">platba_prispevku_zajemce</span> <span class="o">-&gt;</span> <span class="nv">priznivec_zajemce</span> <span class="o">-&gt;</span> <span class="nv">prijeti</span> <span class="o">-&gt;</span> <span class="nv">clen</span>
+  <span class="nv">start</span> <span class="o">-&gt;</span> <span class="nv">zadost_o_clenstvi</span> <span class="o">-&gt;</span> <span class="nv">platba_prispevku_zajemce</span> <span class="o">-&gt;</span> <span class="nv">priznivec_zajemce</span> <span class="o">-&gt;</span> <span class="nv">prijeti</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span> <span class="o">-&gt;</span> <span class="nv">clen</span>
 
   <span class="c1">#start -&gt; nezaplaceny_priznivec -&gt; prijeti_daru -&gt; priznivec
 </span>
   <span class="c1"># stavajici priznivec zada o clenstvi
 </span>  <span class="c1">#priznivec -&gt; zadost_o_clenstvi_priznivce -&gt; prijeti_priznivce -&gt; splneni_podminek
-</span>  <span class="c1">#platba_prispevku -&gt; splneni_podminek
-</span>  <span class="c1">#prijata_prihlaska -&gt; splneni_podminek
-</span>  <span class="c1">#splneni_podminek -&gt; clen
-</span>
+</span>  <span class="nv">platba_prispevku</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span>
+  <span class="nv">prijata_prihlaska</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span>
+
   <span class="c1"># Priznivec nebyl prijat, je z nej nadale priznivce
 </span>  <span class="c1">#zadost_o_clenstvi_priznivce -&gt; neprijeti_priznivce -&gt; priznivec
 </span>
@@ -188,8 +188,8 @@
 </span>  <span class="c1">#priznivec_zajemce [color=salmon2]
 </span>  <span class="nv">zadost_o_clenstvi</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Na webu vyplněná přihláška ke členství"</span><span class="o">]</span>
   <span class="c1">#zadost_o_clenstvi_priznivce[label="Na webu vyplněná přihláška ke členství"]
-</span>  <span class="c1">#platba_prispevku[label="Přijatý členský příspěvek"]
-</span>  <span class="c1">#prijeti_daru[label="Přijatý dar od příznivce"]
+</span>  <span class="nv">platba_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
+  <span class="c1">#prijeti_daru[label="Přijatý dar od příznivce"]
 </span>  <span class="nv">platba_prispevku_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
   <span class="nv">priznivec_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Příznivec"</span><span class="p">,</span> <span class="n">color</span><span class="p">=</span><span class="nv">salmon2</span><span class="o">]</span>
   <span class="nv">neprijeti_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"KrP neschválil"</span><span class="o">]</span>
@@ -197,15 +197,16 @@
 </span>  <span class="nv">prijeti</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"KrP schválil za člena"</span><span class="o">]</span>
   <span class="c1">#prijeti_priznivce[label="KrP schválil za člena"]
 </span>  <span class="nv">vraceni_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Vrácení členského příspěvku"</span><span class="o">]</span>
+  <span class="nv">prijata_prihlaska</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Doručena přihláška v listinné podobě"</span><span class="o">]</span>
   <span class="c1">#vymazani_udaju[label="Vymazání údajů na žádost"]
-</span>  <span class="c1">#splneni_podminek[ shape = "record", height = 0.05, width = 0.5, margin = "0,0", style = "filled", label = "&lt;f0&gt;|&lt;f1&gt;|&lt;f2&gt;", fillcolor="black" ]
-</span>  <span class="c1">#end [shape=point height=0.3 label="Konec"]
+</span>  <span class="nv">splneni_podminek</span><span class="o">[</span> <span class="n">shape</span> <span class="p">=</span> <span class="s2">"record"</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span> <span class="p">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">margin</span> <span class="p">=</span> <span class="s2">"0,0"</span><span class="p">,</span> <span class="n">style</span> <span class="p">=</span> <span class="s2">"filled"</span><span class="p">,</span> <span class="n">label</span> <span class="p">=</span> <span class="s2">"&lt;f0&gt;|&lt;f1&gt;|&lt;f2&gt;"</span><span class="p">,</span> <span class="n">fillcolor</span><span class="p">=</span><span class="s2">"black"</span> <span class="o">]</span>
+  <span class="c1">#end [shape=point height=0.3 label="Konec"]
 </span>
 <span class="p">}</span>
 
       </code></pre></figure>-->
     </div>
-    <div style="margin-top: 1em" id="description"><p>Registrace člena
+    <div style="margin-top: 1em; width: 60%" id="description"><p>Registrace člena
 Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vytvořen uživatelský účet v registru a jsou mu zobrazeny:</p>
 
 <ul>
@@ -216,15 +217,15 @@ Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vyt
 
 <p>Tyto informace jsou mu zobrazeny vždy po přihlášení do registru. Jiné funkce kromě zobrazení platebních údajů nemá k dispozici.</p>
 
-<p>Tyto informace dostane také emailem (eml: 2. Zájemce o členství poté, co vyplní přihlášku na webu.)</p>
+<p>Tyto informace dostane také <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/registered.text.erb">emailem</a></p>
 
-<p>Po přijetí úhrady na správný účet se správným variabilním symbolem je platba zaúčtována jako členský příspěvek do republikového a krajského rozpočtu, v registru dojde ke změně stavu na příznivce a zájemci je zaslán email. (eml: 3. Zájemce, když zaplatí, a dočasně je reg. přízvnicem)</p>
+<p>Po přijetí úhrady na správný účet se správným variabilním symbolem je platba zaúčtována jako členský příspěvek do republikového a krajského rozpočtu, v registru dojde ke změně stavu na příznivce a zájemci je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/paid.text.erb">email</a>.</p>
 
 <p>Po přijetí přihlášky v listinné formě ji kancelář nahraje do systému.</p>
 
 <p>Krajské předsednictvo vyznačuje v registru informaci o přijetí za člena.</p>
 
-<p>Po splnění všech tří podmínek (přihláška v listinné podobě, zaplacený členský příspěvek, schválení přijetí KrP) dojde v registru ke změně stavu na člena a členovi je zaslán email. (eml: 4. Zájemce je přijat (sejdou se všechny podmínky = vyznačeno schválení KrP + má zaplaceno + v kanceláři máme originální přihlášku s podpisem)</p>
+<p>Po splnění všech tří podmínek (přihláška v listinné podobě, zaplacený členský příspěvek, schválení přijetí KrP) dojde v registru ke změně stavu na člena a členovi je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/regular.text.erb">email</a>.</p>
 
 <p><strong>Alternativní scénáře</strong></p>
 
@@ -236,10 +237,10 @@ Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vyt
     <p>Pokud je variabilní symbol špatný, pokusí se kancelář dohledat správný a proces pokračuje dál. Pokud se nepodaří platbu identifikovat, vrací kancelář platbu.</p>
   </li>
   <li>
-    <p>Pokud zájemce není přijat za člena, vrací kancelář platbu (eml: 6. Výzva kanceláři k vrácení příspěvku v okamžiku, kdy KrP vyznačí odmítnutí). Platba musí být odúčtována z republikového a krajského rozpočtu. Zájemci je zaslán email. (eml: 5. Odmítnutí zájemce). Status zájemce je v registru změněn na nezaplacený příznivce. Může znovu požádat o členství, v takovém případě již nemusí zasílat přihlášku v listinné formě, použije se minulá nebo může zaplatit příznivecký příspěvek. Pokud neučiní ani jedno, bude jeho registrace po 30 dnech smazána.</p>
+    <p>Pokud zájemce není přijat za člena, vrací kancelář platbu na základě <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/office_notifications/return_membership_fee.text.erb">emailu</a> a vnitřní kontroly. Platba musí být odúčtována z republikového a krajského rozpočtu. Zájemci je zaslán <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/member_notifications/rejected.text.erb">email</a>. Status zájemce je v registru změněn na nezaplacený příznivce. Může znovu požádat o členství, v takovém případě již nemusí zasílat přihlášku v listinné formě, použije se minulá nebo může zaplatit příznivecký příspěvek. Pokud neučiní ani jedno, bude jeho registrace po 30 dnech smazána.</p>
   </li>
   <li>
-    <p>Pokud po 10 dnech od vyznečení KrP nemá kancelář přihlášku, posílá se upomínka KrP (eml: 11. Upomínka KrPu, když se čeká na přihlášku (po 10 dnech co KrP vyznačil schválení))</p>
+    <p>Pokud po 10 dnech od vyznečení KrP nemá kancelář přihlášku, posílá se <a href="https://github.com/svobodni/party_registry/blob/supporters/app/views/presidium_notifications/missing_application.text.erb">upomínka KrP</a></p>
   </li>
 </ol>
 </div>
