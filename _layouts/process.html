@@ -3,20 +3,21 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-xs-3">
-    <ul class="pull-right nav">
+  <div class="col-md-3 d-print-none">
+    <ul class="nav flex-column">
       {% assign processes = site.data.processes | sort: [0] %}
       {% for process in processes %}
-        <li><a class="post-link" href="{{ process[0] | append: ".html" | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url }}">{{ process[1].id }}. {{ process[1].nazev }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ process[0] | append: ".html" | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url }}">{{ process[1].id }}. {{ process[1].nazev }}</a></li>
       {% endfor %}
     </ul>
   </div>
 
-  <div class="col-xs-9">
-    <h1>{{page.nazev}}</h1>
-
+  <div class="col-md">
+    <h1><small class="text-muted">#{{page.id}}</small> {{page.nazev}}</h1>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data{{page.url | replace: "html", "yml"}}" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Metadata procesu</h2>
     <div id="home">
-      <table class="table table-striped">
+      <table class="table table-striped table-sm">
         <tbody>
           {% if page.cil %}<tr><th>Strategický cíl</th><td>{{page.cil}}</td></tr>{% endif %}
           {% if page.produkt %}<tr><th>Produkt / služba</th><td>{{page.produkt}}</td></tr>{% endif %}
@@ -32,13 +33,22 @@ layout: default
         </tbody>
       </table>
     </div>
+
+    <section>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data{{page.url | replace: "html", "dot"}}" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Diagram procesu</h2>
     <div id="graph">
       <img src="{{ page.name | replace: 'html','svg' | prepend: 'processes/' | prepend: site.baseurl | prepend: site.url}}" class="img-thumbnail img-responsive">
       <!--{% highlight dot %}
   {{ page.dot }}
       {% endhighlight %}-->
     </div>
-    <div style="margin-top: 1em; width: 60%" id="description">{{ page.text }}</div>
+    </section>
+    <section class="mt-5">
+      <a href="https://github.com/svobodni/party_processes/edit/master/_data{{page.url | replace: "html", "md"}}" class="btn btn-default float-right d-print-none">Upravit</a>
+      <h2>Popis procesu</h2>
+      <div style="margin-top: 1em; width: 100%" id="description">{{ page.text }}</div>
+    </section>
   </div>
 
 </div>

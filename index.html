@@ -14,7 +14,8 @@ layout: default
       <th>Vlastník</th>
       <th>Zákazník</th>
     </tr>
-    {% for process in site.data.processes %}
+    {% assign processes = site.data.processes | sort: [0] %}
+    {% for process in processes %}
       <tr>
         <td>{{ process[1].id }}</td>
         <td>
