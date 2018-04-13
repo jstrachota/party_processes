@@ -1,6 +1,3 @@
-Popis procesu
-=============
-
 Předseda formuluje usnesení a určí lhůtu pro hlasování. Oboje odešle emailem místopředsedům KrP a VK, RK.
 
 Místopředsedové ve lhůtě hlasují v odpovědi na email PRO nebo PROTI návrhu.

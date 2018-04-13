@@ -2,7 +2,7 @@ id:	01
 nazev: Přijetí člena
 cil: Rozšiřování členské základny
 produkt: Členství
-ucel: Zpracovat přihlášku a platbu
+#ucel: Zpracovat přihlášku a platbu
 vlastnik: Republiková kancelář
 zakaznik: Zájemce o členství
 # problemy:
@@ -11,10 +11,10 @@ zakaznik: Zájemce o členství
 # metriky:
 #   - poměr nepřijatých ku přijatým;
 #   - doba trvání celého procesu / jednotlivých částí procesu
-udalost: Přijetí přihlášky na webu / v registru
+udalost: Přijetí přihlášky na webu
 podminky:
-# systemy:
-#   - starý web
-#   - registr
-#   - lokální tabulkový procesor
+systemy:
+  - web
+  - registr
+  - finance
 # dokumenty: Stanovy (Požadavek KR-70 - KrP přijímá nové členy)

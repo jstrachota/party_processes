@@ -1,12 +1,12 @@
 digraph G {
-  graph [	fontname = "Helvetica-Oblique", size = "8,8"  ];
-  node [	shape = polygon,
+  graph [	fontname = "Helvetica-Oblique", size = "8,8" ];
+  node [ shape = polygon,
     sides = 4,
     color = deepskyblue,
     style = filled,
     fontname = "Helvetica-Outline" ];
 
-  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\nPřijímání členů\n\nv 2.0"]
+  owner [shape=rect style=rounded penwidth=3 height=1.0 label="#3 : Přijetí příznivce za člena"]
 
   # stavajici priznivec zada o clenstvi
   start -> priznivec -> zadost_o_clenstvi_priznivce -> prijeti_priznivce -> splneni_podminek

@@ -1,6 +1,3 @@
-Popis procesu
-=============
-
 Zájemce o členství vyplní na starém webu přihlášku. Do 10 minut je přihláška synchronizovaná do registru, který se pokusí dohledat adresu v číselníku adres RUIAN.
 
 Pokud se nepodaří adresu dohledat automatizovaně, je nutné ji dohledat následně (brzy) ručně.
