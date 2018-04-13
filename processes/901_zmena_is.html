@@ -50,7 +50,7 @@
 
     <div class="container">
         <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3 d-print-none">
     <ul class="nav flex-column">
       
       
@@ -71,11 +71,12 @@
     </ul>
   </div>
 
-  <div class="col-md-9">
-    <h1>Změna v informačním systému</h1>
-
+  <div class="col-md">
+    <h1><small class="text-muted">#901</small> Změna v informačním systému</h1>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/901_zmena_is.yml" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Metadata procesu</h2>
     <div id="home">
-      <table class="table table-striped">
+      <table class="table table-striped table-sm">
         <tbody>
           <tr><th>Strategický cíl</th><td>Zlepšení informačního systému</td></tr>
           <tr><th>Produkt / služba</th><td>Nasazená nová verze informačního systému</td></tr>
@@ -91,6 +92,10 @@
         </tbody>
       </table>
     </div>
+
+    <section>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/901_zmena_is.dot" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Diagram procesu</h2>
     <div id="graph">
       <img src="http://svobodni.github.io/party_processes/processes/901_zmena_is.svg" class="img-thumbnail img-responsive">
       <!--<figure class="highlight"><pre><code class="language-dot" data-lang="dot">  <span class="k">digraph</span> <span class="nv">G</span> <span class="p">{</span>
@@ -114,17 +119,19 @@
 
       </code></pre></figure>-->
     </div>
-    <div style="margin-top: 1em; width: 100%" id="description"><h1 id="popis-procesu">Popis procesu</h1>
-
-<p>Jednotlivé součásti informačního systému Svobodných jsou koordinovány pomocí serveru <a href="https://github.com/svobodni">github.com</a>. Zde mají projekty své repositáře, je možné prohlížet zdrojový kód, vytvářet vlastní větve a vkládat podněty a připomínky.</p>
+    </section>
+    <section class="mt-5">
+      <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/901_zmena_is.md" class="btn btn-default float-right d-print-none">Upravit</a>
+      <h2>Popis procesu</h2>
+      <div style="margin-top: 1em; width: 100%" id="description"><p>Jednotlivé součásti informačního systému Svobodných jsou koordinovány pomocí serveru <a href="https://github.com/svobodni">github.com</a>. Zde mají projekty své repositáře, je možné prohlížet zdrojový kód, vytvářet vlastní větve a vkládat podněty a připomínky.</p>
 
 <p>Pokud máte podnět pro zlepšení nebo třeba chcete ohlásit chybu v informačním systému, vytvořte issue. (např. pro <a href="https://github.com/svobodni/party_registry/issues">registr</a>)</p>
 
 <p>Kdokoliv si pak může Váš podnět přečíst a zapojit se do práce. Udělá si vlastní fork a v něm nejlépe tematickou větev. Ve větvi pak implementuje požadovanou změnu, commitne a pushne na github. Nakonec je potřeba odeslat pull request.</p>
 
 <p>Správce projektu dostane informaci o pull requestu, vyhodnotí ho nebo odmítne se zdůvodněním. Akceptované změny merguje a nasazuje (deploy) na server.</p>
-
 </div>
+    </section>
   </div>
 
 </div>
@@ -134,7 +141,7 @@
     <footer class="footer my-5">
 
   <div class="container">
-    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</p>
+    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. <span class="d-print-none">Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</span></p>
   </div>
 
 </footer>

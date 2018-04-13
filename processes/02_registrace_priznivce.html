@@ -50,7 +50,7 @@
 
     <div class="container">
         <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3 d-print-none">
     <ul class="nav flex-column">
       
       
@@ -71,11 +71,12 @@
     </ul>
   </div>
 
-  <div class="col-md-9">
-    <h1>Registrace příznivce</h1>
-
+  <div class="col-md">
+    <h1><small class="text-muted">#2</small> Registrace příznivce</h1>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/02_registrace_priznivce.yml" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Metadata procesu</h2>
     <div id="home">
-      <table class="table table-striped">
+      <table class="table table-striped table-sm">
         <tbody>
           <tr><th>Strategický cíl</th><td>Rozšiřování okruhu příznivců</td></tr>
           <tr><th>Produkt / služba</th><td>Příznivectví</td></tr>
@@ -91,6 +92,10 @@
         </tbody>
       </table>
     </div>
+
+    <section>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/02_registrace_priznivce.dot" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Diagram procesu</h2>
     <div id="graph">
       <img src="http://svobodni.github.io/party_processes/processes/02_registrace_priznivce.svg" class="img-thumbnail img-responsive">
       <!--<figure class="highlight"><pre><code class="language-dot" data-lang="dot">  <span class="k">digraph</span> <span class="nv">G</span> <span class="p">{</span>
@@ -101,8 +106,8 @@
     <span class="n">style</span> <span class="p">=</span> <span class="nv">filled</span><span class="p">,</span>
     <span class="n">fontname</span> <span class="p">=</span> <span class="s2">"Helvetica-Outline"</span> <span class="o">]</span><span class="p">;</span>
 
-<span class="c1">//  owner [shape=rect style=rounded penwidth=3 height=1.0 label="Registr\n\Registrace příznivce\n\nv 1.0"]
-</span>
+  <span class="nv">owner</span> <span class="o">[</span><span class="n">shape</span><span class="p">=</span><span class="nv">rect</span> <span class="n">style</span><span class="p">=</span><span class="nv">rounded</span> <span class="n">penwidth</span><span class="p">=</span><span class="mi">3</span> <span class="n">height</span><span class="p">=</span><span class="mf">1.0</span> <span class="n">label</span><span class="p">=</span><span class="s2">"#2 : Registrace příznivce"</span><span class="o">]</span>
+
   <span class="nv">start</span> <span class="o">-&gt;</span> <span class="nv">nezaplaceny_priznivec</span> <span class="o">-&gt;</span> <span class="nv">prijeti_daru</span> <span class="o">-&gt;</span> <span class="nv">priznivec</span>
 
   <span class="c1"># nezaplaceny priznivec zada o clenstvi
@@ -123,7 +128,11 @@
 
       </code></pre></figure>-->
     </div>
-    <div style="margin-top: 1em; width: 100%" id="description"><p>Příznivce se zaregistruje vyplněním formuláře na webu. Je mu vytvořen uživatelský účet v registru a jsou mu zobrazeny informace o úhradě přízniveckého příspěvku. Tyto informace jsou mu zobrazeny vždy po přihlášení do registru. Jiné funkce kromě zobrazení platebních údajů, smazání vlastních údajů a podání žádosti o členství nemá k dispozici.</p>
+    </section>
+    <section class="mt-5">
+      <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/02_registrace_priznivce.md" class="btn btn-default float-right d-print-none">Upravit</a>
+      <h2>Popis procesu</h2>
+      <div style="margin-top: 1em; width: 100%" id="description"><p>Příznivce se zaregistruje vyplněním formuláře na webu. Je mu vytvořen uživatelský účet v registru a jsou mu zobrazeny informace o úhradě přízniveckého příspěvku. Tyto informace jsou mu zobrazeny vždy po přihlášení do registru. Jiné funkce kromě zobrazení platebních údajů, smazání vlastních údajů a podání žádosti o členství nemá k dispozici.</p>
 
 <p>Po přijetí úhrady od příznivce na správný účet se správným variabilním symbolem a se správnou identifikací účelu platby je platba zaúčtována jako dar do republikového rozpočtu, je uváděna v seznamu dárců a v registru dojde ke změně stavu na příznivce.</p>
 
@@ -138,6 +147,7 @@
   </li>
 </ol>
 </div>
+    </section>
   </div>
 
 </div>
@@ -147,7 +157,7 @@
     <footer class="footer my-5">
 
   <div class="container">
-    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</p>
+    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. <span class="d-print-none">Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</span></p>
   </div>
 
 </footer>

@@ -50,7 +50,7 @@
 
     <div class="container">
         <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3 d-print-none">
     <ul class="nav flex-column">
       
       
@@ -71,11 +71,12 @@
     </ul>
   </div>
 
-  <div class="col-md-9">
-    <h1>Přijetí člena</h1>
-
+  <div class="col-md">
+    <h1><small class="text-muted">#1</small> Přijetí člena</h1>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/01_prijeti_clena.yml" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Metadata procesu</h2>
     <div id="home">
-      <table class="table table-striped">
+      <table class="table table-striped table-sm">
         <tbody>
           <tr><th>Strategický cíl</th><td>Rozšiřování členské základny</td></tr>
           <tr><th>Produkt / služba</th><td>Členství</td></tr>
@@ -91,89 +92,54 @@
         </tbody>
       </table>
     </div>
+
+    <section>
+    <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/01_prijeti_clena.dot" class="btn btn-default float-right d-print-none">Upravit</a>
+    <h2>Diagram procesu</h2>
     <div id="graph">
       <img src="http://svobodni.github.io/party_processes/processes/01_prijeti_clena.svg" class="img-thumbnail img-responsive">
       <!--<figure class="highlight"><pre><code class="language-dot" data-lang="dot">  <span class="k">digraph</span> <span class="nv">G</span> <span class="p">{</span>
-  <span class="k">graph</span> <span class="o">[</span>	<span class="n">fontname</span> <span class="p">=</span> <span class="s2">"Helvetica-Oblique"</span><span class="p">,</span> <span class="n">size</span> <span class="p">=</span> <span class="s2">"8,8"</span>  <span class="o">]</span><span class="p">;</span>
-  <span class="k">node</span> <span class="o">[</span>	<span class="n">shape</span> <span class="p">=</span> <span class="nv">polygon</span><span class="p">,</span>
+  <span class="k">graph</span> <span class="o">[</span>	<span class="n">fontname</span> <span class="p">=</span> <span class="s2">"Helvetica-Oblique"</span><span class="p">,</span> <span class="n">size</span> <span class="p">=</span> <span class="s2">"8,8"</span> <span class="o">]</span><span class="p">;</span>
+  <span class="k">node</span> <span class="o">[</span> <span class="n">shape</span> <span class="p">=</span> <span class="nv">polygon</span><span class="p">,</span>
     <span class="n">sides</span> <span class="p">=</span> <span class="mi">4</span><span class="p">,</span>
     <span class="n">color</span> <span class="p">=</span> <span class="nv">deepskyblue</span><span class="p">,</span>
     <span class="n">style</span> <span class="p">=</span> <span class="nv">filled</span><span class="p">,</span>
     <span class="n">fontname</span> <span class="p">=</span> <span class="s2">"Helvetica-Outline"</span> <span class="o">]</span><span class="p">;</span>
 
-  <span class="nv">owner</span> <span class="o">[</span><span class="n">shape</span><span class="p">=</span><span class="nv">rect</span> <span class="n">style</span><span class="p">=</span><span class="nv">rounded</span> <span class="n">penwidth</span><span class="p">=</span><span class="mi">3</span> <span class="n">height</span><span class="p">=</span><span class="mf">1.0</span> <span class="n">label</span><span class="p">=</span><span class="s2">"Registr\n\nPřijímání členů\n\nv 2.0"</span><span class="o">]</span>
-
+  <span class="nv">owner</span> <span class="o">[</span><span class="n">shape</span><span class="p">=</span><span class="nv">rect</span> <span class="n">style</span><span class="p">=</span><span class="nv">rounded</span> <span class="n">penwidth</span><span class="p">=</span><span class="mi">3</span> <span class="n">height</span><span class="p">=</span><span class="mf">1.0</span> <span class="n">label</span><span class="p">=</span><span class="s2">"#1 : Přijetí člena"</span><span class="o">]</span>
 
   <span class="nv">start</span> <span class="o">-&gt;</span> <span class="nv">zadost_o_clenstvi</span> <span class="o">-&gt;</span> <span class="nv">platba_prispevku_zajemce</span> <span class="o">-&gt;</span> <span class="nv">priznivec_zajemce</span> <span class="o">-&gt;</span> <span class="nv">prijeti</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span> <span class="o">-&gt;</span> <span class="nv">clen</span>
 
-  <span class="c1">#start -&gt; nezaplaceny_priznivec -&gt; prijeti_daru -&gt; priznivec
-</span>
-  <span class="c1"># stavajici priznivec zada o clenstvi
-</span>  <span class="c1">#priznivec -&gt; zadost_o_clenstvi_priznivce -&gt; prijeti_priznivce -&gt; splneni_podminek
-</span>  <span class="nv">platba_prispevku</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span>
+  <span class="nv">platba_prispevku</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span>
   <span class="nv">prijata_prihlaska</span> <span class="o">-&gt;</span> <span class="nv">splneni_podminek</span>
 
-  <span class="c1"># Priznivec nebyl prijat, je z nej nadale priznivce
-</span>  <span class="c1">#zadost_o_clenstvi_priznivce -&gt; neprijeti_priznivce -&gt; priznivec
-</span>
   <span class="c1"># Zajemce o clenstvi nebyl prijat, vracime prispevek a je z nej nezaplaceny priznivec
 </span>  <span class="nv">priznivec_zajemce</span> <span class="o">-&gt;</span> <span class="nv">neprijeti_zajemce</span><span class="o">[</span><span class="n">style</span><span class="p">=</span><span class="nv">dotted</span><span class="o">]</span>
   <span class="nv">neprijeti_zajemce</span> <span class="o">-&gt;</span> <span class="nv">nezaplaceny_priznivec</span>
   <span class="nv">neprijeti_zajemce</span> <span class="o">-&gt;</span> <span class="nv">vraceni_prispevku</span>
 
-
-  <span class="c1"># nezaplaceny priznivec zada o clenstvi
-</span>  <span class="c1">#nezaplaceny_priznivec -&gt; zadost_o_clenstvi
-</span>
-
-<span class="k">subgraph</span> <span class="nv">cluster_obnova</span> <span class="p">{</span>
-  <span class="c1"># Prodlouzeni clenstvi
-</span>  <span class="c1">#clen -&gt; clen_po_roce
-</span>  <span class="c1">#clen_po_roce -&gt; platba_prispevku
-</span>  <span class="c1">#clen_po_roce -&gt; nezaplaceny_priznivec[style=dotted]
-</span>
-  <span class="c1"># Prodlouzeni priznivectvi
-</span>  <span class="c1">#priznivec -&gt; priznivec_po_roce
-</span>  <span class="c1">#priznivec_po_roce -&gt; prijeti_daru
-</span>  <span class="c1">#priznivec_po_roce -&gt; nezaplaceny_priznivec[style=dotted]
-</span><span class="p">}</span>
-
-  <span class="c1"># Ukonceni clenstvi na zadost
-</span>  <span class="c1">#clen -&gt; priznivec[style=dotted,label="ukončil členství"]
-</span>
-  <span class="c1"># Vymazani udaju subjektu na zadost
-</span>  <span class="c1">#priznivec -&gt; vymazani_udaju
-</span>  <span class="c1">#nezaplaceny_priznivec -&gt; vymazani_udaju
-</span>  <span class="c1">#vymazani_udaju -&gt; end
-</span>
   <span class="nv">start</span> <span class="o">[</span><span class="n">shape</span><span class="p">=</span><span class="nv">point</span> <span class="n">height</span><span class="p">=</span><span class="mf">0.3</span> <span class="n">label</span><span class="p">=</span><span class="s2">"Start"</span><span class="o">]</span>
   <span class="nv">nezaplaceny_priznivec</span> <span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Nezaplacený příznivec"</span><span class="p">,</span> <span class="n">color</span><span class="p">=</span><span class="nv">salmon2</span><span class="o">]</span>
-  <span class="c1">#clen_po_roce [label="Po roce", color=goldenrod2]
-</span>  <span class="c1">#priznivec_po_roce [label="Po roce", color=goldenrod2]
-</span>  <span class="nv">clen</span> <span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Řádný člen"</span><span class="p">,</span><span class="n">color</span><span class="p">=</span><span class="nv">salmon2</span><span class="o">]</span>
-  <span class="c1">#priznivec [label="Příznivec",color=salmon2]
-</span>  <span class="c1">#priznivec_zajemce [color=salmon2]
-</span>  <span class="nv">zadost_o_clenstvi</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Na webu vyplněná přihláška ke členství"</span><span class="o">]</span>
-  <span class="c1">#zadost_o_clenstvi_priznivce[label="Na webu vyplněná přihláška ke členství"]
-</span>  <span class="nv">platba_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
-  <span class="c1">#prijeti_daru[label="Přijatý dar od příznivce"]
-</span>  <span class="nv">platba_prispevku_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
+  <span class="nv">clen</span> <span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Řádný člen"</span><span class="p">,</span><span class="n">color</span><span class="p">=</span><span class="nv">salmon2</span><span class="o">]</span>
+  <span class="nv">zadost_o_clenstvi</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Na webu vyplněná přihláška ke členství"</span><span class="o">]</span>
+  <span class="nv">platba_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
+  <span class="nv">platba_prispevku_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Přijatý členský příspěvek"</span><span class="o">]</span>
   <span class="nv">priznivec_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Příznivec"</span><span class="p">,</span> <span class="n">color</span><span class="p">=</span><span class="nv">salmon2</span><span class="o">]</span>
   <span class="nv">neprijeti_zajemce</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"KrP neschválil"</span><span class="o">]</span>
-  <span class="c1">#neprijeti_priznivce[label="KrP neschválil"]
-</span>  <span class="nv">prijeti</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"KrP schválil za člena"</span><span class="o">]</span>
-  <span class="c1">#prijeti_priznivce[label="KrP schválil za člena"]
-</span>  <span class="nv">vraceni_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Vrácení členského příspěvku"</span><span class="o">]</span>
+  <span class="nv">prijeti</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"KrP schválil za člena"</span><span class="o">]</span>
+  <span class="nv">vraceni_prispevku</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Vrácení členského příspěvku"</span><span class="o">]</span>
   <span class="nv">prijata_prihlaska</span><span class="o">[</span><span class="n">label</span><span class="p">=</span><span class="s2">"Doručena přihláška v listinné podobě"</span><span class="o">]</span>
-  <span class="c1">#vymazani_udaju[label="Vymazání údajů na žádost"]
-</span>  <span class="nv">splneni_podminek</span><span class="o">[</span> <span class="n">shape</span> <span class="p">=</span> <span class="s2">"record"</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span> <span class="p">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">margin</span> <span class="p">=</span> <span class="s2">"0,0"</span><span class="p">,</span> <span class="n">style</span> <span class="p">=</span> <span class="s2">"filled"</span><span class="p">,</span> <span class="n">label</span> <span class="p">=</span> <span class="s2">"&lt;f0&gt;|&lt;f1&gt;|&lt;f2&gt;"</span><span class="p">,</span> <span class="n">fillcolor</span><span class="p">=</span><span class="s2">"black"</span> <span class="o">]</span>
-  <span class="c1">#end [shape=point height=0.3 label="Konec"]
-</span>
+  <span class="nv">splneni_podminek</span><span class="o">[</span> <span class="n">shape</span> <span class="p">=</span> <span class="s2">"record"</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span> <span class="p">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">margin</span> <span class="p">=</span> <span class="s2">"0,0"</span><span class="p">,</span> <span class="n">style</span> <span class="p">=</span> <span class="s2">"filled"</span><span class="p">,</span> <span class="n">label</span> <span class="p">=</span> <span class="s2">"&lt;f0&gt;|&lt;f1&gt;|&lt;f2&gt;"</span><span class="p">,</span> <span class="n">fillcolor</span><span class="p">=</span><span class="s2">"black"</span> <span class="o">]</span>
+
 <span class="p">}</span>
 
       </code></pre></figure>-->
     </div>
-    <div style="margin-top: 1em; width: 100%" id="description"><p>Registrace člena
+    </section>
+    <section class="mt-5">
+      <a href="https://github.com/svobodni/party_processes/edit/master/_data/processes/01_prijeti_clena.md" class="btn btn-default float-right d-print-none">Upravit</a>
+      <h2>Popis procesu</h2>
+      <div style="margin-top: 1em; width: 100%" id="description"><p>Registrace člena
 Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vytvořen uživatelský účet v registru a jsou mu zobrazeny:</p>
 
 <ul>
@@ -211,6 +177,7 @@ Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vyt
   </li>
 </ol>
 </div>
+    </section>
   </div>
 
 </div>
@@ -220,7 +187,7 @@ Zájemce o členství se zaregistruje vyplněním formuláře na webu. Je mu vyt
     <footer class="footer my-5">
 
   <div class="container">
-    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</p>
+    <p class="text-center">Web vytvořil a spravuje pro vnitřní potřebu podpory IT <a href="https://registr.svobodni.cz/people/342">Jiří Kubíček</a>. <span class="d-print-none">Zapojte se do tvorby - <a href="https://github.com/svobodni/party_processes/tree/master/_data/processes">zdroj stránky</a>.</span></p>
   </div>
 
 </footer>
